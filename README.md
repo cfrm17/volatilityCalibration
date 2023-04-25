@@ -27,7 +27,7 @@ The original estimate does not affect the final result of the iterations, but on
 
 If the estimate does not converge within 10,000 iterations, a warning is issued.  If the variance converges but is less than 1x10-12, then a value of zero is assigned.
 
-The standard form of MLE places the same weight on all data points.  One can use a weighted MLE with weights   to place more or less weight on different parts of the data series.  In particular for time series, an exponential weighting can be applied so that more recent observations receive greater weight.  This makes the volatility estimate more responsive to recent market conditions (see https://finpricing.com/lib/EqCallable.html ).
+The standard form of MLE places the same weight on all data points.  One can use a weighted MLE with weights   to place more or less weight on different parts of the data series.  In particular for time series, an exponential weighting can be applied so that more recent observations receive greater weight.  This makes the volatility estimate more responsive to recent market conditions.
 
 We can determine an iterative scheme for calculating the mean and variance of the distribution. The following set of equations is solved iteratively, converging to σ-hat, μ-hat for sufficiently large k:
 
@@ -61,3 +61,6 @@ The advantages of using the capped volatility are as follows:
 3.	Provides buffer above average volatility for periods of higher volatility (buffer is a parameter)
 
 
+Reference:
+
+https://finpricing.com/product.html
